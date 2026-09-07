@@ -24,7 +24,7 @@ def analyze():
         vf = float(request.args.get('vf'))
 
         # Format them for XGBoost
-        input_data = pd.DataFrame({'PLD': [pld], 'SA': [sa], 'VF': [vf]})
+        input_data = pd.DataFrame({'PLD': [pld], 'SA': [sa], 'VF': [vf]}).values
 
         # Make predictions and round to 2 decimal places
         cap = round(float(model_capacity.predict(input_data)[0]), 2)
