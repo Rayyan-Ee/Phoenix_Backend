@@ -2,6 +2,7 @@ from flask import Flask, request
 import joblib
 import pandas as pd
 import google.generativeai as genai
+import os
 
 # Configure your Gemini AI
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
