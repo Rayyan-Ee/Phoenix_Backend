@@ -1,7 +1,6 @@
 from flask import Flask, request
 import joblib
 import pandas as pd
-python
 import google.generativeai as genai
 
 # Configure your Gemini AI
@@ -43,7 +42,6 @@ def analyze():
     except Exception as e:
         return f"Error: {str(e)}"
 
-python
 @app.route('/ask-gemini', methods=['POST'])
 def ask_gemini():
     try:
